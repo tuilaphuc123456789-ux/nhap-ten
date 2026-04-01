@@ -1,0 +1,33 @@
+from IPython.display import HTML
+
+html_content = """
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập tên</title>
+</head>
+<body>
+    <h2>Nhập tên của bạn:</h2>
+    <input type="text" id="nameInput" placeholder="Tên của bạn">
+    <button onclick="checkName()">Gửi</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkName() {
+            const name = document.getElementById("nameInput").value.toLowerCase();
+            const result = document.getElementById("result");
+
+            if (name === "huy") {
+                result.textContent = "Mày hơi đặc biệt 😎";
+            } else {
+                result.textContent = "Bạn đẹp trai vl 😁";
+            }
+        }
+    </script>
+</body>
+</html>
+"""
+
+HTML(html_content)
